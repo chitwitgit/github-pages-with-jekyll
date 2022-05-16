@@ -1,13 +1,13 @@
-# Your GitHub Learning Lab Repository for GitHub Pages
+# Introduction
+In this project, our team will create and manage a repository on Github, starting with setting up a workflow and organizing the project flow. Then, we declare ourselves as contributors and add some personal information to this file. After making sure every team member has added their own .md file and input the respective information, we add some C code to our repository, get a status badge and finally adding our page link to the course public repository for TA checking.
 
-Welcome to **your** repository for your GitHub Learning Lab course. This repository will be used during the different activities that I will be guiding you through. 
+# Code
 
-Oh! I haven't introduced myself...
+# Contributors
 
-I'm the GitHub Learning Lab bot and I'm here to help guide you in your journey to learn and master the various topics covered in this course. I will be using Issue and Pull Request comments to communicate with you. In fact, I already added an issue for you to check out.
-
-![issue tab](https://lab.github.com/public/images/issue_tab.png)
-
-I'll meet you over there, can't wait to get started!
-
-This repository is licensed under [MIT](../LICENSE) (c) 2019 GitHub, Inc.
+{% for students in site.students %}
+    <p> >> <img src="{{students.image}}" width="100" height="100">
+        @<a href="https://github.com/{{students.user}}">{{students.user}}</a> 
+        ({{students.name}}) </p>
+    <p> &emsp; >> {{students.content | markdownify}}
+{% endfor %}
