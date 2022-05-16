@@ -5,9 +5,9 @@ In this project, our team will create and manage a repository on Github, startin
 
 # Contributors
 
-{% for students in site.students %}
-    <p> >> <img src="{{students.image}}" width="100" height="100">
-        @<a href="https://github.com/{{students.user}}">{{students.user}}</a> 
-        ({{students.name}}) </p>
-    <p> &emsp; >> {{students.content | markdownify}}
+{% for students in site.student %}
+    <p> >> <img src="{{student.image}}" width="100" height="100">
+        @<a href="https://github.com/{{student.user}}">{{student.user}}</a> 
+        ({{student.name}}) </p>
+    <p> &emsp; >> {{student.content | markdownify}}
 {% endfor %}
