@@ -6,6 +6,7 @@ In this project, our team will create and manage a repository on Github, startin
 # Contributors
 
 {% for students in site.student %}
+    {{students.name}}
     <p> >> <img src="{{students.image}}" width="100" height="100">
         @<a href="https://github.com/{{students.user}}">{{students.user}}</a> 
         ({{students.name}}) </p>
